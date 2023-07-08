@@ -6,7 +6,7 @@ service: default
 env_variables:
   DB_USER: postgres
   DB_PASS: Postgres!101
-  DB_NAME: postgres
+  DB_NAME: postgres2
   SECRET: thisisasecret
   # e.g. my-awesome-project:us-central1:my-cloud-sql-instance
   INSTANCE_CONNECTION_NAME: kp-issue-tracker:us-west1:issue-tracker-db

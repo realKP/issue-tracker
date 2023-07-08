@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS public.organizations (
     org_creator_id integer NOT NULL,
     org_name character varying(255) NOT NULL,
     org_create_date date NOT NULL,
-    org_description character varying(255)
+    org_invite_code character varying(255) NOT NULL
 );
 
 
@@ -220,10 +220,10 @@ COPY public.issues (issue_id, project_id, issue_creator_id, issue_name, issue_as
 -- Data for Name: organizations; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.organizations (org_id, org_creator_id, org_name, org_create_date, org_description) FROM stdin;
-1	3	Boolaire LLC	2022-04-13	\N
+COPY public.organizations (org_id, org_creator_id, org_name, org_create_date, org_invite_code) FROM stdin;
+1	3	Boolaire LLC	2022-04-13	Sample invite code
 3	1	Delete org	2022-04-13	This org is to test deletions
-2	2	Fake org	2022-04-13	This is a sample description
+2	2	Fake org	2022-04-13	This is a sample invite code
 \.
 
 
