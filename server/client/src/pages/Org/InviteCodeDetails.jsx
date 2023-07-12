@@ -43,6 +43,17 @@ export default function InviteCodeDetails({ closeModalHandler }) {
         </Text>
         <Text fontSize={{ base: 'md', sm: 'lg' }} fontWeight={'bold'}>{inviteCode}</Text>
         <Flex>
+        <Button
+            bg={'teal.400'}
+            color={'white'}
+            _hover={{
+              bg: 'teal.500',
+            }}
+            flex={1}
+            mr={2}
+            onClick={() => {navigator.clipboard.writeText(inviteCode)}}>
+            Copy
+          </Button>
           <Button
             bg={'gray.400'}
             color={'white'}
@@ -50,20 +61,9 @@ export default function InviteCodeDetails({ closeModalHandler }) {
               bg: 'gray.500',
             }}
             flex={1}
-            mr={2}
+            ml={2}
             onClick={closeModalHandler}>
             Back
-          </Button>
-          <Button
-            bg={'teal.400'}
-            color={'white'}
-            _hover={{
-              bg: 'teal.500',
-            }}
-            flex={1}
-            ml={2}
-            onClick={() => {navigator.clipboard.writeText(inviteCode)}}>
-            Copy
           </Button>
         </Flex>
       </Stack>
