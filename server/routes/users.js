@@ -87,7 +87,7 @@ router.get('/login-success', (req, res, next) => {
 // Redirected to from failure /login
 router.get('/login-failure', (req, res, next) => {
     try {
-        res.status(401).send(false).end()
+        res.status(401).send(false).end();
     } catch (err) {
         console.log(err);
         res.status(500).send(false).end();
