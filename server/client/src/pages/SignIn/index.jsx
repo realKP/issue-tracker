@@ -25,6 +25,7 @@ export default function SignIn() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
@@ -35,9 +36,10 @@ export default function SignIn() {
 
     if (!validateForm()) {
       console.error('invalid credentials');
+      setErrorMessage('Please enter a valid email and password');
       return;
     }
-
+    
     auth.signin({email, password}, () => {
       // Send them back to the page they tried to visit when they were
       // redirected to the login page. Use { replace: true } so we don't create
@@ -46,7 +48,9 @@ export default function SignIn() {
       // won't end up back on the login page, which is also really nice for the
       // user experience.
       navigate(from, { replace: true });
-    });
+    }).then(
+      setErrorMessage('Please enter a valid email and password')
+    );
   }
 
   return (
@@ -64,6 +68,17 @@ export default function SignIn() {
         </Stack>
 
         <form onSubmit={handleSubmit}>
+            {errorMessage && (
+              <Box
+                rounded={'lg'}
+                boxShadow={'lg'}
+                bg={'#FFCCCC'}
+                color={'#FF0000'}
+                textAlign={'center'}
+                p={8}>
+                {errorMessage} 
+              </Box>
+            )}
           <Box
             rounded={'lg'}
             bg={useColorModeValue('white', 'gray.700')}
