@@ -13,6 +13,8 @@ Link to site: [https://kp-issue-tracker.uw.r.appspot.com](https://kp-issue-track
   - [View your Dashboard](#dashboard "View your Dashboard")
   - [Sign Out](#signout "Sign Out")
 - [Database Design](#database "Database Design")
+  - [Diagrams](#diagrams "Diagrams")
+  - [Outline](#outline "Outline")
 
 ## Overview <a name="overview"></a>
 This project is an issue tracking web app (similar to Asana or Jira) that allows software teams to maintain and manage their development tasks. The issue tracker can be used by teams of developers working collaboratively to help track progress on their own projects. Users can create Organizations that others can join as well as create Projects, each with its own individual Issues representing tasks or bugs. The application is written using JavaScript, React, Chakra UI, NodeJS, and Express. It is deployed through Google Cloud Platform's App Engine with a PostgreSQL database.
@@ -99,3 +101,67 @@ Always make sure to sign out when you're done using Issue Tracker. To sign out, 
 ![Screenshot showing where profile icon is](https://github.com/realKP/issue-tracker/assets/76978772/19b93fa9-2d6b-4596-a995-79fc24a80485)
 
 ## Database Design <a name="database"></a>
+To provide more detail on how the data in this app relate to each other, I have provided the entity relationship diagram (ERD), schema, and outline used to create the database.
+
+### Diagrams <a name="diagrams"></a>
+#### Entity Relationship
+For a thorough explanation of the notation used in the ERD below, feel free to read [this article](https://www.freecodecamp.org/news/crows-foot-notation-relationship-symbols-and-how-to-read-diagrams/ "Crow's Foot Notation").
+
+
+![Entity relationship diagram](https://github.com/realKP/issue-tracker/assets/76978772/9bf4d555-b638-4a0a-bc31-a3d018220694)
+
+#### Schema
+The schema below illustrates the primary and foreign key relationships between the various entities. The underlined attributes are the primary key for that entity.
+
+![Database schema](https://github.com/realKP/issue-tracker/assets/76978772/2be5b601-333c-4eae-af28-38219c3b3c9b)
+
+### Outline <a name="outline"></a>
+_Note: since most attributes are not nullable, nullable is used where attributes can be NULL_
+
+- Users: records the details of users with accounts
+  - user_id: INT, auto-increment, unique, primary key
+  - org_id: INT, foreign key
+  - user_first_name: VARCHAR
+  - user_last_name: VARCHAR
+  - user_email: VARCHAR, unique
+  - user_password_hash: VARCHAR
+  - Relationships:
+    - A User can belong to at most one Organization, but an Organization can have zero or more Users.
+
+- Organizations: records the details of organizations created by users
+  - org_id: INT, auto-increment, unique, primary key
+  - org_creator_id: INT, foreign key
+  - org_name: VARCHAR
+  - org_create_date: DATE
+  - org_invite_code:: VARCHAR
+  - Relationships:
+    - An Organization can have zero or more Projects, but a Project belongs to only one Organization.
+    - _See Users_
+
+- Projects: records the details of projects created by users
+  - project_id: INT, auto-increment, unique, primary key
+  - org_id: INT, foreign key
+  - project_creator_id: INT, foreign key
+  - project_name: VARCHAR
+  - project_create_date: DATE
+  - project_description: VARCHAR, nullable
+  - Relationships:
+    - A Project can have zero or more Issues, but an Issue belongs to only one Project.
+    - _See Organizations_
+
+- Issues: records the details of issues created by users
+  - issue_id: INT, auto-increment, unique, primary key
+  - project_id: INT, foreign key
+  - issue_creator_id: INT, foreign key
+  - issue_name: VARCHAR
+  - issue_assignee_id: INT, foreign key
+  - issue_create_date: DATE
+  - issue_type: VARCHAR
+  - issue_priority: VARCHAR
+  - issue_status: VARCHAR
+  - issue_due_date: DATE, nullable
+  - issue_description: VARCHAR, nullable
+  - Relationships:
+    - _See Projects_
+
+
