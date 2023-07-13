@@ -64,16 +64,38 @@ If you want to leave an organization, click the **Leave Org** button, then click
  
 
 ### Create and View Projects <a name="projects"></a>
+To create a project within your organization, click on **Projects** in the top left navigation bar, then click the **New Project** button. Enter the project's name and a description for the project.
 
+![Screenshot showing where projects is](https://github.com/realKP/issue-tracker/assets/76978772/ce1206ed-0d01-47dc-9426-9c4b94cab5ab)
+![Screenshot showing where new project button is](https://github.com/realKP/issue-tracker/assets/76978772/20b3da6d-94b4-4a20-849e-f8db1dd2e0df)
+![Screenshot showing the create project menu](https://github.com/realKP/issue-tracker/assets/76978772/22cab983-9ed3-43cd-9335-c9d86b493d7a)
 
+Your projects are shown on the projects page, where you can edit the name or description and even delete the project. If you delete a project, all the issues associated with that project will also be deleted.
 
-
-
+![Screenshot of projects page with project shown](https://github.com/realKP/issue-tracker/assets/76978772/8fc961e0-062f-4d69-b0d1-68c412249508)
 
 
 ### Create and View Issues <a name="issues"></a>
-### View your Dashboard <a name="dashboard"></a>
-### Sign Out <a name="signout"></a>
+To create an issue associated with a project, begin by clicking on that particular project. You will be directed to the project's issues page. Once there, click on the **New Issue** button. Each field of the form is required.
 
+![Screenshot of a project's issues page](https://github.com/realKP/issue-tracker/assets/76978772/dd9bf408-619e-4b67-8071-66f09b05015a)
+![Screenshot of create issue menu](https://github.com/realKP/issue-tracker/assets/76978772/2dc19949-f2be-4d95-8f05-6a934504490d)
+
+You can change the status of an issue or view its details by clicking on the issue on its project's issue page.
+
+![Screenshot highlighting issue on project page](https://github.com/realKP/issue-tracker/assets/76978772/88334c35-99df-4f38-a502-913c0832eda9)
+![Screenshot highlighting issue's status drop down menu](https://github.com/realKP/issue-tracker/assets/76978772/99f727ce-e570-4140-a7a6-d16a98877c1f)
+
+
+### View your Dashboard <a name="dashboard"></a>
+Your dashboard is a summary of issues in all projects that are assigned to you. Here you can edit issues as well. To view your dashboard, click on **Dashboard** in the top left navigation bar.
+
+![Screenshot of dashboard](https://github.com/realKP/issue-tracker/assets/76978772/a17e8a69-0e1c-402e-9412-f084aa40697f)
+![Screenshot of editing issue from dashboard](https://github.com/realKP/issue-tracker/assets/76978772/aa4f5fa4-db49-4ade-9dfb-6621f6224fc7)
+
+### Sign Out <a name="signout"></a>
+Always make sure to sign out when you're done using Issue Tracker. To sign out, click on the profile icon in the top right corner of any page, then click **Sign Out**. 
+
+![Screenshot showing where profile icon is](https://github.com/realKP/issue-tracker/assets/76978772/19b93fa9-2d6b-4596-a995-79fc24a80485)
 
 ## Database Design <a name="database"></a>
