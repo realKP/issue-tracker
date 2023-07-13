@@ -26,7 +26,7 @@ Visit Issue Tracker's home page at the public URL: [https://kp-issue-tracker.uw.
 
 
 ### Create an Account <a name="create"></a>
-To create an account, click **Sign Up** in the top right navigation bar or **Get Started Free**.
+To create an account, click **Get Started Free** or **Sign Up** in the top right navigation bar.
 
 ![Screenshot of options to create an account](https://github.com/realKP/issue-tracker/assets/76978772/ee5e571b-919f-4af5-954b-d711f3ba9e60)
 
@@ -38,7 +38,7 @@ Or if you already have an existing account, simply click **Sign In** in the top 
 
 
 ### Create and View Organizations <a name="organizations"></a>
-You must create a new organization or join an existing organization with an invite code. You can only be a member of one organization at a time and cannot access any other areas of the web app until you are a member of an organization.
+You can create a new organization or join an existing organization with an invite code. You can only be a member of one organization at a time and cannot access any other areas of the web app until you are a member of an organization.
 
 ![Screenshot of create or join organization menu](https://github.com/realKP/issue-tracker/assets/76978772/968910b7-4129-43f9-8bac-6f21ab6f34f6)
 
@@ -46,7 +46,7 @@ To create an organization, click the **Create Org** button and enter your new or
 
 ![Screenshot of creating organization menu](https://github.com/realKP/issue-tracker/assets/76978772/7c6a3e3e-226f-4ba7-879a-5c1c8dc26449)
 
-To join an existing organization, click the **Join Org** button and enter the unique organization code shared with you. You will then be added as a member to this organization.
+To join an existing organization, click the **Join Org** button instead and enter the unique organization code shared with you. You will then be added as a member to this organization.
 
 ![image](https://github.com/realKP/issue-tracker/assets/76978772/cfe2da02-2c27-483d-815a-dc3aed6393b9)
 
