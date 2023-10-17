@@ -1,5 +1,5 @@
-# [Issue Tracker](https://kp-issue-tracker.uw.r.appspot.com "Issue Tracker")
-Link to site: [https://kp-issue-tracker.uw.r.appspot.com](https://kp-issue-tracker.uw.r.appspot.com "Issue Tracker")
+# [Issue Tracker](https://issue-tracker-kp.uw.r.appspot.com "Issue Tracker")
+Link to site: [https://issue-tracker-kp.uw.r.appspot.com](https://issue-tracker-kp.uw.r.appspot.com "Issue Tracker")
 
 ## Table of Contents
 - [Overview](#overview "Overview")
@@ -22,7 +22,7 @@ This project is an issue tracking web app (similar to Asana or Jira) that allows
 ## Usage <a name="usage"></a>
 
 ### Visit Issue Tracker <a name="visit"></a>
-Visit Issue Tracker's home page at the public URL: [https://kp-issue-tracker.uw.r.appspot.com](https://kp-issue-tracker.uw.r.appspot.com "Issue Tracker")
+Visit Issue Tracker's home page at the public URL: [https://issue-tracker-kp.uw.r.appspot.com](https://issue-tracker-kp.uw.r.appspot.com "Issue Tracker")
 
 ![Screenshot of Issue Tracker home page](https://github.com/realKP/issue-tracker/assets/76978772/d4ba293e-4537-4d7a-94c8-26f200742935)
 
